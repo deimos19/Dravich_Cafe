@@ -3,6 +3,7 @@
 }
 body{
     background-color: black;
+    font-family: 'Roboto', sans-serif !important;
 }
 .fixed-img-size {
     width: 50%;
@@ -65,7 +66,27 @@ body{
     padding: 0px 0;
     /* background-color: #00ff00; */
   }
-
+  .menu-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .menu-buttons button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-buttons button:hover {
+    background-color: #f4a261;
+    color: white;
+  }
+  
 @keyframes rotateAndColorChange {
     0% {
         transform: rotate(0deg);

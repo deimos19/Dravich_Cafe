@@ -17,8 +17,8 @@
       text-align: center;
       background-color: #ffffff;
       background-image: 
-        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.236)), /* Dark overlay */
-        url('images/bg3.jpg'); /* Background image */
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.659)), /* Dark overlay */
+        url('images/bg4.jpg'); /* Background image */
       background-size: cover; /* Ensure the background image covers the entire page */
       background-position: center; /* Center the background image */
     }
@@ -30,7 +30,7 @@
       background: #ffffff;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background-image: url('images/bg3.jpg');
+      background-image:linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57)), url('images/bg4.jpg');
       background-size: cover;
     }
     .menu-buttons {
@@ -44,7 +44,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      background-color: #49250a;
+      background-color: #8ca500;
       color: white;
       transition: background-color 0.3s;
     }
@@ -165,6 +165,9 @@
   
     <!-- Menu Section -->
     <div class="menu-container" style="flex: 2;">
+      <div class="menu-header">
+        <h5>What Are You Craving?</h5>
+      </div>
       <div class="menu-buttons">
         <button onclick="showCategory('snacks')">Snacks</button>
         <button onclick="showCategory('beverages')">Beverages</button>
