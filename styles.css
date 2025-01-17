@@ -125,7 +125,7 @@ body{
 /* Apply black overlay with opacity on smaller screens */
 @media (max-width: 768px) {
     .overlay {
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+        background-color: rgba(0, 0, 0, 0.645); /* Adjust opacity as needed */
     }
     .navbar-nav .nav-item {
         margin-right: 0; /* Remove horizontal gap */
