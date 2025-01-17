@@ -61,7 +61,7 @@ body{
     animation: rotateAndColorChange 5s infinite;
 }
 .main-container {
-    margin-top: 3rem; /* Adjust this value to match the height of your navbar */
+    margin-top: 4rem; /* Adjust this value to match the height of your navbar */
     padding: 0px 0;
     /* background-color: #00ff00; */
   }

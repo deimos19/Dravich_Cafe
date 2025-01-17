@@ -17,8 +17,13 @@
       padding: 0;
       text-align: center;
       background-color: #ffffff;
-      background-image: url('images/bg3.jpg');
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.236)), /* Dark overlay */
+        url('images/bg3.jpg'); /* Background image */
+      background-size: cover; /* Ensure the background image covers the entire page */
+      background-position: center; /* Center the background image */
     }
+    
     .menu-container {
       max-width: 800px;
       margin: 20px auto;
@@ -56,8 +61,8 @@
       gap: 20px;
     }
     .menu-card {
-      background: #fff;
-      
+      background: #000000c1;
+      color: white;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       overflow: hidden;
@@ -70,14 +75,16 @@
     }
     .menu-card-content {
       padding: 10px;
+      color: white;
     }
     .menu-card-content h3 {
       margin: 0;
       font-size: 18px;
+      color: white;
     }
     .menu-card-content p {
       margin: 5px 0;
-      color: #555;
+      color: #ffffff;
       font-size: 14px;
     }
     .price {

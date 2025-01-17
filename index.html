@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
@@ -17,8 +19,8 @@
                 <img src="images/logo.png" alt="Darvich Cafe Logo" style="height: 40px; margin-right: 0px;">
                 Dravich Cafe
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgb(255, 255, 255); border:none;">
+                <span class="navbar-toggler-icon text-white" style="background-color: rgb(255, 255, 255); border:none;"></span>
             </button>
             <div class="collapse navbar-collapse text-white" id="navbarNavDropdown" style="margin-left: 1.5rem;">
                 <ul class="navbar-nav">
@@ -26,7 +28,7 @@
                         <a class="nav-link active text-white" aria-current="page" href="menu.html">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="#">About</a>
+                        <a class="nav-link active text-white" href="#about">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active text-white" href="#">Contact Us</a>
@@ -62,8 +64,10 @@
         <!-- Overlay div -->
         <div class="overlay"></div>
         <div class="hero-content" style="position: relative; margin-left: 2rem;">
-            <h1 style="font-size: 4rem; font-weight: bold; color:#38caff;">Welcome to Dravich Cafe</h1>
-            <p style="font-size: 1.2rem;">Your favorite place to relax and enjoy delicious coffee and treats</p>
+            <h1 style="font-size: 4rem; font-weight: bold; color:#38caff; font-family: 'Roboto', sans-serif; margin-top:6rem;">
+                Welcome to Dravich Cafe
+              </h1>
+            <p style="font-size: 1.4rem;">Your favorite place to relax and enjoy delicious coffee and treats</p>
             <a href="#menu" class="btn btn-primary" style="padding: 15px 30px; font-size: 1rem; text-decoration: none; background-color: #6f4f37; color: white; border-radius: 5px; border: none;">Explore Our Menu</a>
         </div>
     </div>
@@ -79,7 +83,7 @@
                 
                 <!-- Right Side: Description -->
                 <div class="col-lg-6">
-                    <h2 class="display-4" style="font-size: 2.5rem; color: #6f4f37;">About Dravich Cafe</h2>
+                    <h2 class="display-4" style="font-size: 2.5rem; color: #6f4f37; margin-top: 1rem;;">About Dravich Cafe</h2>
                     <p class="text-white" style="font-size: 1.2rem; line-height: 1.6;">
                         Welcome to Dravich Cafe, your cozy escape to savor delicious coffee and delightful treats. 
                         Located in the heart of the city, our cafe offers a warm, inviting atmosphere where you can relax, work, or meet friends. 
@@ -93,9 +97,9 @@
         </div>
     </section>
 
-    <section id="menu" class="menu-section" style="padding: 50px 0; background-color: #000000;">
+    <section id="menu" class="menu-section" style="padding: 100px 0; background-color: #000000;">
         <div class="container">
-            <h2 class="text-center display-4" style="font-size: 2.5rem; color: #6f4f37; margin-bottom: 40px;">Our Menu</h2>
+            <h2 class="text-center display-4" style="font-size: 2.5rem; color: #38caff; margin-bottom: 40px;">Our Menu</h2>
             <h4 class="text-center display-4" style="font-size: 1.5rem; color: #ffffff; margin-bottom: 40px;">Dravich Cafe Offers a Variety of Delicious Options</h4>
     
             <div id="menuCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
@@ -241,8 +245,8 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <a href="orders.html" class="btn btn-primary" style="background-color: #4e372654; color: #6d6d6d; border: none; padding: 10px 20px; font-size: 1rem; text-decoration: none; border-radius: 5px;">
-                    Go to Orders for Full Menu
+                <a href="menu.html" class="btn btn-primary" style="background-color: #4e372654; color: #6d6d6d; border: none; padding: 10px 20px; font-size: 1rem; text-decoration: none; border-radius: 5px;">
+                    Go to Detailed Menu
                 </a>
             </div>
         </div>
@@ -251,7 +255,7 @@
 
     <section id="specials" class="specials-section" style="padding: 50px 0; background-color: #000000;">
         <div class="container text-center">
-            <h2 style="font-size: 2.5rem; color: #6f4f37;">Special Offers</h2>
+            <h2 style="font-size: 2.5rem; color: #38caff;">Special Offers</h2>
             <p style="font-size: 1.2rem; color: #555;">Enjoy our limited-time deals! Visit us to grab your favorite treats at a discounted price.</p>
             <a href="specials.html" class="btn btn-primary" style="background-color: #6f4f37; color: #ffffff; padding: 10px 20px; border-radius: 5px; border:none;">View Offers</a>
         </div>
@@ -259,15 +263,15 @@
 
     <section id="events" class="events-section" style="padding: 50px 0; background-color: #000000;">
         <div class="container text-center">
-            <h2 style="font-size: 2.5rem; color: #6f4f37;">Upcoming Events</h2>
+            <h2 style="font-size: 2.5rem; color: #38caff;">Upcoming Events</h2>
             <div class="row mt-4">
                 <div class="col-md-6">
-                    <h4 style="color: #6f4f37;">Live Jazz Night</h4>
-                    <p style="font-size: 1.2rem; color: #555;">Enjoy live music every Friday evening from 7 PM to 10 PM.</p>
+                    <h4 style="color: #8ed7f1;">Live Jazz Night</h4>
+                    <p style="font-size: 1.2rem; color: #ffffff;">Enjoy live music every Friday evening from 7 PM to 10 PM.</p>
                 </div>
                 <div class="col-md-6">
-                    <h4 style="color: #6f4f37;">Barista Workshop</h4>
-                    <p style="font-size: 1.2rem; color: #555;">Join us for a barista workshop and learn the art of coffee making. Next session: January 20th.</p>
+                    <h4 style="color: #85d3f0;">Barista Workshop</h4>
+                    <p style="font-size: 1.2rem; color: #ffffff;">Join us for a barista workshop and learn the art of coffee making. Next session: January 20th.</p>
                 </div>
             </div>
         </div>
@@ -276,7 +280,7 @@
 
     <section id="our-story" class="story-section" style="padding: 50px 0; background-color: #1f1f1f;">
         <div class="container">
-            <h2 class="text-center" style="font-size: 2.5rem; color: #6f4f37;">Our Story</h2>
+            <h2 class="text-center" style="font-size: 2.5rem; color: #38caff;">Our Story</h2>
             <div class="row align-items-center mt-4">
                 <div class="col-md-6">
                     <div class="ratio ratio-16x9">
@@ -290,7 +294,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <p style="font-size: 1.2rem; color: #ededed;">Dravich Cafe started with a dream to create a cozy spot where people could enjoy a warm cup of chai or coffee. Every sip and bite is crafted with love and care.</p>
+                    <p style="font-size: 1.2rem; color: #ffffff;">Dravich Cafe started with a dream to create a cozy spot where people could enjoy a warm cup of chai or coffee. Every sip and bite is crafted with love and care.</p>
                 </div>
             </div>
         </div>
@@ -299,7 +303,7 @@
 
     <section id="contact" class="contact-section" style="padding: 50px 0; background-color: #000000;">
         <div class="container">
-            <h2 class="text-center" style="font-size: 2.5rem; color: #6f4f37;">Contact Us</h2>
+            <h2 class="text-center" style="font-size: 2.5rem; color: #38caff;">Contact Us</h2>
             <div class="row mt-4">
                 <div class="col-md-4">
                     <form>
@@ -319,23 +323,15 @@
                     </form>
                 </div>
                 <div class="col-md-4">
-                    <h4 style="color: #6f4f37;">Visit Us</h4>
+                    <h4 style="color: #38caff; margin-top:2rem;">Visit Us</h4>
                     <p>123 Cafe Lane, Food City</p>
                     <p>Email: info@dravichcafe.com</p>
                     <p>Phone: +123-456-7890</p>
                 </div>
                 <div class="col-md-4">
-                    <h4 style="color: #6f4f37;">Our Location</h4>
+                    <h4 style="color: #38caff;">Our Location</h4>
                     <div class="ratio ratio-16x9">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345098076!2d-122.4064174846811!3d37.78583497975662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f4b7c31b%3A0xa63d81e519e8c56!2s123%20Cafe%20Lane%2C%20Food%20City!5e0!3m2!1sen!2sus!4v1611234567890" 
-                            width="600" 
-                            height="450" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7883.108332995825!2d76.731283589297!3d8.92097231363537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05e1899d0a706f%3A0xb3fd7313040e5b13!2sNedumankavu%2C%20Kerala!5e0!3m2!1sen!2sin!4v1737098065422!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
