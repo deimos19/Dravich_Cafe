@@ -1,0 +1,114 @@
+.hero-content{
+    text-align: left;
+}
+body{
+    background-color: black;
+}
+.fixed-img-size {
+    width: 50%;
+    height: 150px;  /* Fixed height for all images */
+    object-fit: cover;  /* Ensures the image covers the area without stretching */
+    object-position: center;  /* Ensures the image is centered if it has to be cropped */
+}
+.mb-3 input{
+    background-color: rgb(27, 27, 27);
+    border: none;
+}
+.mb-3 textarea{
+    background-color: rgb(27, 27, 27);
+    border: none;
+}
+.mb-3 label{
+    color: white;
+}
+.mb-3 input::placeholder{
+    color: rgb(110, 109, 109);
+}
+.mb-3 textarea::placeholder{
+    color: rgb(110, 109, 109);
+}
+.col-md-4 p{
+    color: white;
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Fully transparent by default */
+    transition: background-color 0.3s ease;
+}
+/* Add horizontal spacing between list items */
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Horizontal gap */
+}
+
+/* Remove the last item's margin to avoid extra space */
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+/* Dropdown menu item hover effect */
+/* Dropdown menu item hover effect */
+.dropdown-menu .dropdown-item:hover {
+    color: black !important; /* Force text color to black */
+    background-color: #ffffff !important; /* Optional: Change background color */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+.pulsate {
+    animation: rotateAndColorChange 5s infinite;
+}
+.main-container {
+    margin-top: 3rem; /* Adjust this value to match the height of your navbar */
+    padding: 0px 0;
+    /* background-color: #00ff00; */
+  }
+
+@keyframes rotateAndColorChange {
+    0% {
+        transform: rotate(0deg);
+        color: #ff0000; /* Red color */
+    }
+    25% {
+        transform: rotate(90deg);
+        color: #00ff00; /* Green color */
+    }
+    50% {
+        transform: rotate(180deg);
+        color: #0000ff; /* Blue color */
+    }
+    75% {
+        transform: rotate(270deg);
+        color: #ff00ff; /* Magenta color */
+    }
+    100% {
+        transform: rotate(360deg);
+        color: #ff0000; /* Red color */
+    }
+}    
+
+
+/* Apply black overlay with opacity on smaller screens */
+@media (max-width: 768px) {
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    }
+    .navbar-nav .nav-item {
+        margin-right: 0; /* Remove horizontal gap */
+        margin-bottom: 10px; /* Add vertical gap */
+    }
+    .main-container {
+        flex-direction: column; /* Stack the items vertically */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Align items to the center horizontally */
+      }
+      .menu-container {
+        padding: 30px 0; /* Adjust padding for smaller screens */
+        width: 100%; /* Full width on smaller screens */
+        margin-left: 0; /* Remove any default margin */
+        margin-right: 0; /* Remove any default margin */
+      }  
+}
+
