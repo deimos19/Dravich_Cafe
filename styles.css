@@ -88,6 +88,38 @@ body{
         color: #ff0000; /* Red color */
     }
 }    
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+}
+.container-fluid.container1 {
+    position: relative;
+    background-image: url('images/bg4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Adding the fade effect */
+.container-fluid.container1 .fade-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    pointer-events: none; /* Make sure overlay doesn't block any interaction */
+}
+
+/* Styling the content (optional) */
+.container-fluid.container1 .content {
+    z-index: 2; /* Ensure content is above the overlay */
+}
 
 
 /* Apply black overlay with opacity on smaller screens */
