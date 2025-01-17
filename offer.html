@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers - Dravich Cafe</title>
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: white;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .offer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+        .offer-card {
+            background-color: #444;
+            border: 1px solid #666;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            width: 280px;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .offer-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        }
+        .offer-card img {
+            width: 100%;
+            height: auto;
+        }
+        .offer-details {
+            padding: 20px;
+        }
+        .offer-details h2 {
+            font-size: 1.6em;
+            color: #fff;
+            margin: 0 0 10px;
+        }
+        .offer-details p {
+            margin: 10px 0;
+            color: #ddd;
+            font-size: 1.1em;
+        }
+        .discount {
+            color: #e63946;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #218838;
+        }
+        .offer-card i {
+            font-size: 3em;
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-coffee"></i> Special Offers at Dravich Cafe</h1>
+        <p>Delicious treats at unbeatable prices!</p>
+    </header>
+
+    <div class="offer-container">
+        <div class="offer-card">
+            <img src="images/coffee.jpg" alt="Coffee">
+            <div class="offer-details">
+                <h2>Cappuccino</h2>
+                <p>Rich and creamy espresso with frothy milk.</p>
+                <p class="discount">20% Off</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <img src="images/sandwich.jpg" alt="Sandwich">
+            <div class="offer-details">
+                <h2>Grilled Sandwich</h2>
+                <p>Freshly made with a delicious filling of your choice.</p>
+                <p class="discount">15% Off</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <img src="images/cake.jpg" alt="Cake">
+            <div class="offer-details">
+                <h2>Chocolate Cake</h2>
+                <p>Moist and decadent with rich chocolate flavor.</p>
+                <p class="discount">25% Off</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <img src="images/pastry.jpg" alt="Pastry">
+            <div class="offer-details">
+                <h2>Butter Croissant</h2>
+                <p>Flaky and buttery, perfect for a quick snack.</p>
+                <p class="discount">10% Off</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let confettiInterval;
+    
+        // Function to start the confetti effect
+        function startConfetti() {
+            // Left corner confetti
+            confetti({
+                particleCount: 150,
+                spread: 80,
+                origin: { x: 0.1, y: -1.0 },
+                colors: ['#ff0', '#ff4d00', '#e63946', '#00bfae', '#28a745'],
+                drift: 2,
+                ticks: 300,
+                gravity: 0.5,
+                angle: -90
+            });
+    
+            // Right corner confetti
+            confetti({
+                particleCount: 150,
+                spread: 80,
+                origin: { x: 0.9, y: -1.0 },
+                colors: ['#ff0', '#ff4d00', '#e63946', '#00bfae', '#28a745'],
+                drift: -2,
+                ticks: 300,
+                gravity: 0.5,
+                angle: -90
+            });
+        }
+    
+        // Function to continuously trigger the confetti with a 1-second delay
+        function continuousConfetti() {
+            startConfetti();
+            confettiInterval = setTimeout(continuousConfetti, 5000); // 1-second delay after each pop
+        }
+    
+        // Start the confetti effect when the page loads
+        window.onload = () => {
+            continuousConfetti();
+        };
+    </script>
+    
+    
+    
+</body>
+</html>
