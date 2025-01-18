@@ -6,6 +6,8 @@
     <title>Special Offers - Dravich Cafe</title>
     <!-- Font Awesome Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <!-- Confetti Library -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <style>
@@ -13,11 +15,11 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #333;
+            background-color: #240000;
             color: white;
         }
         header {
-            background-color: #222;
+            background-color: #4d0000;
             color: #fff;
             padding: 30px;
             text-align: center;
@@ -51,6 +53,7 @@
         .offer-card:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+            animation: pulse 1.5s infinite;
         }
         .offer-card img {
             width: 100%;
@@ -70,9 +73,10 @@
             font-size: 1.1em;
         }
         .discount {
-            color: #e63946;
+            color: #ccff00 !important;
             font-weight: bold;
             font-size: 1.3em;
+            animation: glow 1.5s infinite;
         }
         .cta-button {
             display: inline-block;
@@ -84,22 +88,213 @@
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s ease;
+            animation: bounce 2s infinite;
         }
         .cta-button:hover {
             background-color: #218838;
         }
-        .offer-card i {
-            font-size: 3em;
-            color: #e63946;
-            margin-bottom: 10px;
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: cover;
         }
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.6); /* Black overlay */
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #ccff00, 0 0 10px #ccff00; }
+            50% { text-shadow: 0 0 15px #ccff00, 0 0 25px #ccff00; }
+            100% { text-shadow: 0 0 5px #ccff00, 0 0 10px #ccff00; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+
+        .horizontal-card {
+            display: flex;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            overflow: hidden; /* To hide anything outside the card boundaries */
+        }
+        
+        .horizontal-card img {
+            width: 40%;  /* Default image width */
+            height: 100%;
+            object-fit: cover;  /* Ensures the image is cropped to fit */
+            object-position: center;  /* Keeps the center of the image visible */
+            margin-right: 20px;  /* Space between image and content */
+        }
+        
+        .horizontal-card-content {
+            flex: 1;  /* Takes up remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .horizontal-card h2 {
+            margin-top: 0;
+        }
+        
+        .discount {
+            font-weight: bold;
+            color: #f44336;  /* Optional: highlight the discount */
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            width: 100%; /* Default width to take up full space */
+            box-sizing: border-box; /* To include padding in the width calculation */
+            text-align: center;
+        }
+        
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+        
+        /* Media Queries for larger screens */
+        @media (min-width: 1200px) {
+            .horizontal-card img {
+                width: 30%;  /* Reduced image size for large screens */
+            }
+            
+            .cta-button {
+                width: 50%;  /* Button width for large screens */
+            }
+        }
+        
+        @media (min-width: 1600px) {
+            .horizontal-card img {
+                width: 25%;  /* Further reduced image size for extra large screens */
+            }
+            
+            .cta-button {
+                width: 40%;  /* Button width for extra-large screens */
+            }
+        } 
+        
+        /* Center the offer box using a wrapper */
+.offer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .special-offer-box {
+    background-color: #4e0808;
+    border: 2px solid #f2ff0000;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0px 26px rgba(235, 92, 92, 0.99); /* Add a subtle shadow */
+}
+  
+  .special-offer-header h2 {
+    color: #f2ff00;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .special-offer-details p {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: 'Verdana', sans-serif;
+    margin: 10px 0;
+  }
+  
+  .special-offer-details strong {
+    color: #f2ff00;
+    font-weight: bold;
+  }
+  
+  .claim-weekend-deal-btn {
+    background-color: #7ec602;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .claim-weekend-deal-btn:hover {
+    background-color: #e04e29;
+  }
+  
+        
+          
+        
     </style>
 </head>
 <body>
     <header>
         <h1><i class="fas fa-coffee"></i> Special Offers at Dravich Cafe</h1>
         <p>Delicious treats at unbeatable prices!</p>
+        
     </header>
+
+    <!-- Carousel -->
+    <div id="offerCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/banner1.avif" class="d-block w-100" alt="Special Offer">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Exclusive Coffee Offer</h5>
+                    <p>Get 30% off on all coffee drinks this weekend!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/banner2.jpg" class="d-block w-100" alt="Special Offer">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Free Dessert</h5>
+                    <p>Enjoy a free dessert with every main course ordered!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/banner3.jpg" class="d-block w-100" alt="Special Offer">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Happy Hours</h5>
+                    <p>Flat 50% off on all beverages from 4 PM to 6 PM.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#offerCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#offerCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     <div class="offer-container">
         <div class="offer-card">
@@ -113,7 +308,7 @@
         </div>
 
         <div class="offer-card">
-            <img src="images/sandwich.jpg" alt="Sandwich">
+            <img src="images/cakes.jpeg" alt="Sandwich">
             <div class="offer-details">
                 <h2>Grilled Sandwich</h2>
                 <p>Freshly made with a delicious filling of your choice.</p>
@@ -123,7 +318,7 @@
         </div>
 
         <div class="offer-card">
-            <img src="images/cake.jpg" alt="Cake">
+            <img src="images/Croissant.jpg" alt="Cake">
             <div class="offer-details">
                 <h2>Chocolate Cake</h2>
                 <p>Moist and decadent with rich chocolate flavor.</p>
@@ -133,7 +328,7 @@
         </div>
 
         <div class="offer-card">
-            <img src="images/pastry.jpg" alt="Pastry">
+            <img src="images/dessert.jpg" alt="Pastry">
             <div class="offer-details">
                 <h2>Butter Croissant</h2>
                 <p>Flaky and buttery, perfect for a quick snack.</p>
@@ -141,14 +336,85 @@
                 <a href="#" class="cta-button">Order Now</a>
             </div>
         </div>
+        <div class="offer-card">
+            <img src="images/coffee.jpg" alt="Coffee">
+            <div class="offer-details">
+                <h2>Cappuccino</h2>
+                <p>Rich and creamy espresso with frothy milk.</p>
+                <p class="discount">20% Off</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <img src="images/cakes.jpeg" alt="Sandwich">
+            <div class="offer-details">
+                <h2>Grilled Sandwich</h2>
+                <p>Freshly made with a delicious filling of your choice.</p>
+                <p class="discount">15% Off</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
     </div>
 
+    <div class="horizontal-card">
+        <img src="images/chai.jpeg" alt="Burger">
+        <div class="horizontal-card-content">
+            <h2>Cheesy Burger</h2>
+            <p>Juicy and loaded with melted cheese, served with fries.</p>
+            <p class="discount">Offer: Buy 1 Get 1 Free!</p>
+            <a href="#" class="cta-button">Claim Now</a>
+        </div>
+    </div>
+    
+    <div class="horizontal-card">
+        <img src="images/coffee.jpg" alt="Pizza">
+        <div class="horizontal-card-content">
+            <h2>Margherita Pizza</h2>
+            <p>Classic pizza with fresh tomato sauce and mozzarella.</p>
+            <p class="discount">Offer: 30% Off</p>
+            <a href="#" class="cta-button">Claim Now</a>
+        </div>
+    </div>
+    
+    <div class="horizontal-card">
+        <img src="images/Croissant.jpg" alt="Salad">
+        <div class="horizontal-card-content">
+            <h2>Greek Salad</h2>
+            <p>Fresh and healthy with a mix of greens, olives, and feta cheese.</p>
+            <p class="discount">Offer: Free Drink with Salad</p>
+            <a href="#" class="cta-button">Claim Now</a>
+        </div>
+    </div>
+    <div class="special-offer-caption">
+        <p style="font-family: 'Times New Roman', serif; font-size: 24px; font-style: italic; color: #cac9cb; text-align: center; margin-top:2rem;">Unmissable Weekend Group Deal - Celebrate with Friends!</p>
+    </div>
+    <div class="offer-wrapper">
+        <div class="special-offer-box">
+            <div class="special-offer-header">
+                <h2>🎉 Weekend Group Special Offer! 🎉</h2>
+            </div>
+            <div class="special-offer-details">
+                <p>✨ **Bring your friends** this Friday and Sunday! Get exclusive discounts for groups of 4 or more! 🎉</p>
+                <p>🎁 **Teenagers & Young Adults, Get Ready!** 🙌</p>
+                <p>✅ Free snacks for every 4th person in your group!</p>
+                <p>💥 Grab this **limited time offer** and save BIG! 💥</p>
+                <p><strong>Valid Only on Fridays & Sundays!</strong></p>
+            </div>
+            <button class="claim-weekend-deal-btn">Claim Offer Now!</button>
+        </div>
+    </div>
+    
+      
+      
+      
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
         let confettiInterval;
     
-        // Function to start the confetti effect
         function startConfetti() {
-            // Left corner confetti
             confetti({
                 particleCount: 150,
                 spread: 80,
@@ -160,7 +426,6 @@
                 angle: -90
             });
     
-            // Right corner confetti
             confetti({
                 particleCount: 150,
                 spread: 80,
@@ -173,19 +438,14 @@
             });
         }
     
-        // Function to continuously trigger the confetti with a 1-second delay
         function continuousConfetti() {
             startConfetti();
-            confettiInterval = setTimeout(continuousConfetti, 5000); // 1-second delay after each pop
+            confettiInterval = setTimeout(continuousConfetti, 10000);
         }
     
-        // Start the confetti effect when the page loads
         window.onload = () => {
             continuousConfetti();
         };
     </script>
-    
-    
-    
 </body>
 </html>
